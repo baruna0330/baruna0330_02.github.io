@@ -1,0 +1,42 @@
+{% load static %}
+
+<html lang="ko">
+
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'wordcount/css/style.css' %}" /> 
+<meta charset="utf-8">
+<title>wordcount</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+  <body>
+    <div id="jb-container">
+      <div id="jb-header">
+        <h1>멋쟁이 사자처럼 글자세기!!(Word Count)</h1>
+      </div>
+      <div id="jb-sidebar-left">
+        <h2>간단한 설명</h2>
+        <ul>
+          <a href="{% url 'about' %}">About</a>
+        </ul>
+      </div>
+      <div id="jb-content">
+        <h2>WordCount</h2>
+        <form action="{% url 'result' %}">
+            <textarea name="fulltext" id="" cols="40" rows="10"></textarea><br>
+            <input type="submit" value="Count!"/>
+        </form>
+      <div id="jb-footer">
+        
+      </div>
+      
+      <div id="jb-footer">
+        <p>작성자 : 이민주</p>
+        <p>학과 : 경영학과</p>
+        <p>장래희망 : CEO, 영앤리치</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
